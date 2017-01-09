@@ -1,0 +1,12 @@
+{
+    "gate_way_addr" : "127.0.0.1",
+    "gate_way_client_port" : 20000,
+    "gate_way_server_port" : 20001,
+    "gate_way_auth_key" : "keyoffastway",
+    "proxys" : [
+        {
+            "port" : 30000,
+            "proxy" : "127.0.0.1:80"
+        }
+    ]
+}
