@@ -27,8 +27,8 @@
 
     1.在server_out服务器开启fastway服务
         开启详情请查看：https://github.com/funny/fastway
-    2.在server_out服务器开启natproxy客户端服务
-        $ ./natproxy --Model=client
-    3.在server_in服务器开启natproxy服务端服务
+    2.在server_in服务器开启natproxy服务端服务
         $ ./natproxy --Model=server
+    3.在server_out服务器开启natproxy客户端服务
+        $ ./natproxy --Model=client
     4.启动后通过http://8.8.8.8:80访问到内网http://192.168.1.110:80
