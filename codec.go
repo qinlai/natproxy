@@ -13,7 +13,7 @@ func NewCustomerCodec(conn net.Conn) *customerCodec {
 }
 
 func (c *customerCodec) Receive() (interface{}, error) {
-	buff := make([]byte, 4096)
+	buff := make([]byte, 64*1024)
 	n, e := c.conn.Read(buff)
 	if e != nil {
 		return nil, e
