@@ -1,0 +1,30 @@
+{
+    "ServerAddr" : "120.76.203.150", //server addr
+    "Port" : 10001,                 //port for client
+    "GateModel" : "gc",             //value 'gs' or 'gc', 'gs':gateway with server, 'gc':gateway with client
+    "AuthKey" : "keyofnatproxy",    //key
+    "ReusePort" : false,            //Enable/Disable the reuseport feature.
+    "MaxPacket" : 524288,           //Limit max packet size.
+    "MemPoolType" : "atom",         //Type of memory pool ('sync', 'atom' or 'chan').
+    "MemPoolFactor" : 2,            //Growth in chunk size in memory pool.
+    "MemPoolMinChunk" : 64,         //Smallest chunk size in memory pool.
+    "MemPoolMaxChunk" : 65536,      //Largest chunk size in memory pool.
+    "MemPoolPageSize" : 1048576,    //Size of each slab in memory pool.
+    "ClientMaxConn" : 16,           //Limit max virtual connections for each client.
+    "ClientBufferSize" : 2048,      //Setting bufio.Reader's buffer size.
+    "ClientSendChanSize" : 1024,    //Tunning client session's async behavior.
+    "Proxys" : [                    //proxy list
+        {
+            "ClientPort" : 10000,
+            "ServerProxy" : "127.0.0.1:10000"
+        },
+        {
+            "ClientPort" : 10004,
+            "ServerProxy" : "127.0.0.1:80"
+        },
+        {
+            "ClientPort" : 10005,
+            "ServerProxy" : "127.0.0.1:8080"
+        }
+    ]
+}
