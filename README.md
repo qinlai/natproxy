@@ -24,7 +24,7 @@
         "MemPoolMinChunk" : 64,         //Smallest chunk size in memory pool.
         "MemPoolMaxChunk" : 65536,      //Largest chunk size in memory pool.
         "MemPoolPageSize" : 1048576,    //Size of each slab in memory pool.
-        "ClientMaxConn" : 16,           //Limit max virtual connections for each client.
+        "ClientMaxConn" : 40960,           //Limit max virtual connections for each client.
         "ClientBufferSize" : 2048,      //Setting bufio.Reader's buffer size.
         "ClientSendChanSize" : 1024,    //Tunning client session's async behavior.
         "Proxys" : [                    //proxy list
