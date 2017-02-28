@@ -31,7 +31,9 @@ func startClient(addr string) {
 					break L
 				}
 				log.Println("restart client")
-				stopClient()
+				for _, c := range gClients {
+					c.Stop()
+				}
 				for doStartClient(addr) != nil {
 					time.Sleep(time.Second * 2)
 				}
@@ -114,7 +116,11 @@ func (c *Client) Serv() {
 				customer := NewCustomer(session, inSession)
 				go customer.handleIn()
 				go customer.handleOut()
+			} else {
+				log.Println("dial server error : ", e.Error())
 			}
+		} else {
+			log.Println("client accept error:", e.Error())
 		}
 	}
 }
