@@ -30,10 +30,10 @@ func startFastway() (*fastway.Gateway, net.Addr) {
 
 	var serverAddr, clientAddr string
 	if gConf.GateModel == GateModelsClient {
-		serverAddr = fmt.Sprintf("%s:%d", gConf.Addr, gConf.Port)
+		serverAddr = fmt.Sprintf(":%d", gConf.Port)
 		clientAddr = fmt.Sprintf("%s:0", gConf.Addr)
 	} else {
-		clientAddr = fmt.Sprintf("%s:%d", gConf.Addr, gConf.Port)
+		clientAddr = fmt.Sprintf(":%d", gConf.Port)
 		serverAddr = fmt.Sprintf("%s:0", gConf.Addr)
 	}
 
